@@ -1,5 +1,9 @@
 first line
 second line
 third line
+<<<<<<< HEAD
 forth line
+=======
+fourth line
+>>>>>>> dev
 fifth line
