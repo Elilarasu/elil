@@ -1,9 +1,121 @@
-first line
-second line
-third line
-forth line
-fifth line
-sixth line
-seven line
-eigth line
-this test is commplete" hello world"
+sudo ----------- access as root user
+su ------------ switch user
+whoani------------tells who you are
+exit------------exit or logout
+logout------------logout
+date------------tells date
+uname------------name of OS
+uptime------------shows server running time
+clear------------clear the windows and give a fresh window
+mkdir------------make directory
+mkdir dir1------------ dir 1 is a name of the new created folder, directory
+ls------------list of the directories
+cd------------change the directory
+touch file 1------------create file in the name if file 1
+cat > ------------create a file and wait to put file in it
+pwd------------present working directory
+cd ..------------goto previous directory
+cd../..------------goto 2 dir back
+cd------------ enter into root directory
+rm (filename)------------ delete a file
+rm -f (file name need to be delete) ------------ delete a file (forceful delete)
+rm -rf (file or dir. name need to be delete)------------  delete a file or folder, directory
+:w------------ save a file in vi or vim editor
+:q------------ quit a vi vim editor
+:wq------------ save and quit a vi vim editor
+:wq!------------  foreceful save and quit in vi vim editor
+:$------------  goto last line of the command in vi vim
+:set number------------  assign number of commands
+:15------------ go to 15th line of the command
+:/(word)------------  find the perticular word in the command
+:%s/word/word ------------ replace a word with another word (word replace one by one)
+:%s/word/word/g------------ globally change the word at a time
+dd------------ delete a perticular line in vi vim
+2d------------ delete 3 lines (0,1,2)
+x------------  delete 1 char
+xx------------  delete 2 char
+cp file1 file2------------ copy file1 in file2
+mv file1------------  file 1 moved to a dir. you mentioned
+ls -l------------  full file list
+ls -la------------  show hidden content
+ls -lrt------------ show content acc. to time created
+ls -lrta ------------  show all hidden content acc. to time created
+chmod 763------------  getting the permission
+free -m------------  show in mb
+free -k------------  show in kb
+sar------------  CPU usage check
+ps -ef ------------  show all the process
+ps -ef | grep (name of the file) ------------  show all the process of the mentioned file
+du -sh ------------  disk utlization shows
+du -sh file1------------  show the size of the file1
+df -h------------  disk file system (same as the disk mangement in windows)
+history------------  shows all the command enterd so far in the linux command
+.------------  current dir
+./(software name) start --accept-license-----------  install a application with license
+./(software name) start------------  install a application
+tar -xvzf (name of file)-----------  unzip tar file
+kill -9 (user id of app) ------------ kill the current running app with that id
+ls -la-----------list all the items in a pertiular directory (list view)
+ssh -i (name of vi file created) ec2-user@(private ip address of private instense)---------- for connect a private instense from a public instense(instense under instense)
+ansible-playbook -i (inventory file name) (yml file name)--------------to play the playbook for sequence operation of several functions
+ansible all -i (inventory file name) -m ping------------for ping master to slave
+mysql -h (endpoint name) -u admin -P 3306 -p   ------------ for connect the database to the ec2 instense
+aws configure------------open aws configuration and ask for access code and secret code
+aws s3 ls----------list the active s3 bucket
+aws ec2 ls---------list the active ec2 instenses
+find / -type d -name ["cli-plugins"] ----------------  find in linux any folder or file [d-fol, f-file]
+netstat -tulpn | grep LISTEN ---------------- listner port list
+															GIT COMMANDS
+git log-------------check log of the git
+git log --oneline---------------show all log in one line (recent to old)
+git log --oneline -n5-----------show first 5 log from recent to old
+git log --reverse --oneline -n5---------show last 5 log from old to recent
+yum git install-------install git in linux
+git add-------------add file from work repos to staging
+git commit----------commit file from staging to local repos.
+git -am commit-------commit directly to local server
+git branch ------------- see branch
+git checkout ---------- change the branch
+git branch (name) ------ create new branch
+git push origin <tagname> ------- add tag
+git remote add test (https://github.com/ARUNRAJ420/test.git) ------ that url linked with the name test for simplification usage of that link
+git push -u test master ------- push the local file to git, u means url in test, master is the branch, can also create a different branch and push from there
+
+																	DOCKER COMMANDS
+sudo docker exec ${CONTAINER_ID or CONTAINER_NAME} cat /var/jenkins_home/secrets/initialAdminPassword -------- jenkins running under docker password viewer command
+usermod -a -G docker jenkins ------------------ add jenkins user to the docker group
+docker images ----------------- show all docker images
+docker run -d --name (container name) -p (port no:actual port no[8080] -----------------to run a docker container in a perticular name and port [-p stands for public]
+docker rm -f ----------------- remove something from docker [container]
+docker rmi ----------------- remove image of docker
+docker kill ----------------- kill docker container
+docker stop [container name]----------------- to stop a container
+docker start [container name]----------------- to start a container
+docker restart [container name]-----------------to restart a container
+docker inspect [container id] -------------- full detail of the container
+docker history [docker images id] ----------- view all layers of that images
+docker pull -------------- pull image from  the site
+cd /var/lib/docker/ -------------- all files of the container stored in this directoy
+docker container run -d -i ubuntu /bin/bash ------------ run ubuntu container in docker
+docker inspect [57f2159f4cd9] ----------- container detail shows
+docker logs [-f] 57f2159f4cd9 ------------- container logs view
+docker exec -it 57f2159f4cd9 bash -------------- enter inside container
+docker volume ls ---------------- list volumes
+cd /var/lib/docker/volumes/ ----------------- docker volume location
+docker volume create [vol name] ----------- crte volume
+docker run -d --name webserver --mount type=bind,source=/root/test,target=/app nginx -------------- run docker container in specific volume folder and run specific file with path
+docker run -d --name webserver --mount source=mountvolume,target=/app nginx ----------------------- run docker container in specific volume and folder
+docker network create --driver [dri name] [name] ----------------------- create ntwrk in specfic driver
+docker network create [name] ------------------- crte network with name
+docker network rm 66f84c17395e  ----------- to dlte netwrk
+docker build -t [nginxtest:1.0] [location of docker file] ------------ buld dkr img from dkr file
+docker login ---------- used for login to docker
+docker push [arun420/nginxtest:1.0] ----------------- push dokr img to dkr hub
+docker swarm init --advertise-addr [ip] ------------- make node as manager for swarm
+docker swarm leave -f ----------- forceflly left the created manager swarm
+docker swarm join-token worker ------------- get back worker token in manager
+docker service create --name web -p 80:80 --replicas 3 nginx ---------------- crte ngin image in 3 replica container at port 80 in name web
+docker service ps web ------------------ list of replica container inside the docker playground
+docker service scale web=5 ----------- scale up the replica no. to 5
+docker service ps web ----------------- list of replicas
+docker service ls ---------------- list of service [here nginx only in name web
