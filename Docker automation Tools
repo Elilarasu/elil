@@ -1,0 +1,45 @@
+DevOps Automation Tools
+Jenkins -------------- Automation tool | CICD | deploying, and testing | written in java
+Docker ---------------- containerization tools | OS-level virtualization| deliver applications in packages referred to as a container
+Puppet ----------------- configuration management, written in C++, model-driven tool that needs limited use of programming language, 
+Apache Maven ----------------- build automation tool, Written in Java, used mainly for Java-based projects, acts as a project management and a comprehension tool.
+Gradle ----------------- build automation tools, automate software development, testing, and deployment at improved speeds, 
+                                
+								DevOps Pipeline (CI/CD) Tools
+								
+CircleCI ----------------- CI/CD tool, runs your CI/CD pipeline automatically, 
+Bamboo ----------------- CI/CD and delivery of software applications, 
+TeamCity ----------------- robust continuous integration tool for DevOps
+Travis CI ----------------- efficient continuous integration (CI) tool to develop and test applications hosted on GitHub or Bitbucket
+Buddy -----------------   "
+                                Version Control Tools
+								
+Git ----------------- written in C, Perl, Shell, and Tcl, and originally authored by Linus Torvalds, GPL v2 license
+GitHub ----------------- Written in Ruby, C, Go, and ECMAScript
+
+									Configuration Management Tools
+
+Chef----------------- configuration management solution, Chef is written in Erlang and Ruby and utilizes a Domain Specific Language (DSL) that is pure Ruby for system configuration
+Kubernetes ----------------- container orchestration system to automate the deployment, management, and scaling of contained-based software, written in Go.
+Ansible ----------------- tool for software provision, deployment, and configuration management, Written in Python, Shell, Ruby, and PowerShell, It works agentless
+Vagrant  ----------------- build and maintain portable, lightweight, and reproducible virtual environments like Docker Containers, AWS, VMware, etc
+Consul ----------------- CM
+Terraform ----------------- Infrastructure as Code tool, consistent Command Line Interface (CLI) workflow to help you manage several cloud services.
+
+										DevOps Testing Tools
+					
+Selenium ----------------- DevOps tool to automate your software testing
+Tricentis Tosca ----------------- Accelerate software testing using an AI-based, scriptless tool
+TestSigma ----------------- test automation DevOps tool for web, API, and mobile apps
+IBM Rational Functional Tester ----------------- automated functional and regression testing
+SoapUI ----------------- testing DevOps tool for Representational State Transfers (REST) and Simple Object Access Protocol (SOAP).
+
+							DevOps Monitoring Tools
+
+Nagios ----------------- monitors infrastructure, systems, and networks , It offers alerting and monitoring services for applications
+Prometheus ----------------- open source monitoring software, records metrics in real-time in a time-series database by using powerful queries and highly dimensional data models
+New Relic ----------------- showing the real-time status of the developmental processes, 
+PagerDuty ----------------- real-time operations monitoring platform, 
+Sensu ----------------- monitoring IT infrastructure. It helps you monitor servers, applications, network devices, and containers
+Splunk ----------------- Monitor your infrastructure performance at cloud scale in real-time
+ELK Stack ----------------- allows you to aggregate logs out of your entire applications and systems, analyze logs, create visualizations for infrastructure and application monitoring, security analytics, quick troubleshooting
